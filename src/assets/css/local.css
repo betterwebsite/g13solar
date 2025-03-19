@@ -5,6 +5,7 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #sbs {
+    padding-top: 40.875rem;
     padding: var(--sectionPadding);
   }
   #sbs .cs-container {
@@ -121,6 +122,9 @@
 }
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
+  #sbs {
+    padding-top: 14.375rem;
+  }
   #sbs .cs-container {
     flex-flow: row;
     justify-content: space-between;

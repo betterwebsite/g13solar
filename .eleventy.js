@@ -12,6 +12,7 @@ const configServer = require("./src/config/server");
 // Other
 const filterPostDate = require("./src/config/postDate");
 const isProduction = configServer.isProduction;
+const eleventyPluginSharpImages = require("@codestitchofficial/eleventy-plugin-sharp-images");
 
 
 module.exports = function (eleventyConfig) {
@@ -43,6 +44,10 @@ module.exports = function (eleventyConfig) {
     =======================================================================*/
     /** https://www.11ty.dev/docs/plugins/ */
 
+    eleventyConfig.addPlugin(eleventyPluginSharpImages, {
+        urlPath: "/assets/images",
+        outputDir: "public/assets/images",
+    });
     /**
      *  ELEVENTY NAVIGATION
      *  Sets up the eleventy navigation plugin for a scalable navigation as used in _includes/components/header.html
